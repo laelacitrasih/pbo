@@ -6,6 +6,12 @@
  */
 package pbo;
 public abstract class Orang {
+    /*
+    Task (berdarkan https://drive.google.com/file/d/0BxMqes854yZcRlpEbFU4TmtudGM/view)
+    - Orang full attribute encapsulate
+    /*
+    
+    */
     /*--- class orang full atribut, encapsulate ---*/
     private String nama;
     private String kk;

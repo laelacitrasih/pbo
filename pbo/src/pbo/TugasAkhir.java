@@ -6,6 +6,14 @@
  */
 package pbo;
 public class TugasAkhir {
+     /*
+    Task (berdarkan https://drive.google.com/file/d/0BxMqes854yZcRlpEbFU4TmtudGM/view)
+    - TugasAkhir full attribute, encapsulate
+    - Set Pembimbing by index
+    - Get Pembimbing by index
+    - Get Pembimbing by kode dosen
+    */
+    
     /*--- class TugasAkhir full atribut, encapsulate ---*/
     private Dosen[] pembimbing = new Dosen[2];
     private String judul;

@@ -6,6 +6,15 @@
  */
 package pbo;
 public class Dosen extends Orang{
+    /*
+    Task (berdarkan https://drive.google.com/file/d/0BxMqes854yZcRlpEbFU4TmtudGM/view)
+    - Dosen full attribute, encapsulate
+    - Create new Kelompok
+    - Get Kelompok by index
+    - Get Kelompok by topik / id kelompok
+    - Delete Kelompok
+    /*
+    
     /*--- class Dosen full atribut, encapsulate ---*/
     private KelompokTA[] topikTA = new KelompokTA[10];
     private String kode;

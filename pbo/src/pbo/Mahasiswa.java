@@ -6,6 +6,12 @@
  */
 package pbo;
 public class Mahasiswa extends Orang {
+    /*
+    Task (berdarkan https://drive.google.com/file/d/0BxMqes854yZcRlpEbFU4TmtudGM/view)
+    - Mahasiswa full attribute, encapsulate
+    - Create new Tugas Akhir
+    */
+
     /*--- class mahasiswa full atribut, encapsulate ---*/
     private TugasAkhir tugasAkhir;
     private String status;

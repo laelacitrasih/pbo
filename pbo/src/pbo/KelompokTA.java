@@ -6,6 +6,15 @@
  */
 package pbo;
 public class KelompokTA {
+    /*
+    Task (berdarkan https://drive.google.com/file/d/0BxMqes854yZcRlpEbFU4TmtudGM/view)
+    - Kelompok TA full attribute, encapsulate
+    - Add Anggota kelompok
+    - Get Anggota by index
+    - Get Anggota by NIM
+    - Remove Anggota
+    */
+    
     /*--- class KelompokTA full atribut, encapsulate ---*/
     private String topik;
     private Mahasiswa[] anggota = new Mahasiswa[2];
