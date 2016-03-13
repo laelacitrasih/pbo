@@ -42,6 +42,7 @@ public class Pbo {
         //Minimum Specification nomor 4. Dosen dapat menambahkan dirinya menjadi pembimbing suatu tugas akhir dari seorang mahasiswa
         d0.GetKelompok("pbo").getAnggota("012").getTugasAkhir().setPembimbing(d0, 0);
         d0.setStatus("Pembimbing 1");
+        
         //Minimum Specification nomor 5. Mahasiswa dapat merevisi judul TA
         m0.getTugasAkhir().setJudul("sisfo TA");
         /*optional menampilkan judul TA*/
