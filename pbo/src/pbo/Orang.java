@@ -1,14 +1,15 @@
 /*
  Kelompok 8 Sistem Informasi Pengolahan Data-TA
- - Imam Rahman 1301140150
- - Ika Setyasari 1301144020
- - Laela Citra Asih 1301144300
+ - Imam Rahman 1301140150 (class Mahasiswa, class TugasAkhir, class main(Pbo) )
+ - Ika Setyasari 1301144020 (class Dosen)
+ - Laela Citra Asih 1301144300 (class KelompokTA, class orang)
  */
 package pbo;
 public abstract class Orang {
+    /*--- class orang full atribut, encapsulate ---*/
     private String nama;
     private String kk;
-
+    /*--- end of class orang full atribut, encapsulate ---*/
     public Orang(String nama, String kk) {
         this.nama = nama;
         this.kk = kk;
@@ -29,5 +30,4 @@ public abstract class Orang {
     public void setKk(String kk) {
         this.kk = kk;
     }
-      
 }

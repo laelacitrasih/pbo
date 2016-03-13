@@ -1,8 +1,8 @@
 /*
  Kelompok 8 Sistem Informasi Pengolahan Data-TA
- - Imam Rahman 1301140150
- - Ika Setyasari 1301144020
- - Laela Citra Asih 1301144300
+ - Imam Rahman 1301140150 (class Mahasiswa, class TugasAkhir, class main(Pbo) )
+ - Ika Setyasari 1301144020 (class Dosen)
+ - Laela Citra Asih 1301144300 (class KelompokTA, class orang)
  */
 package pbo;
 public class Pbo {
@@ -28,7 +28,7 @@ public class Pbo {
         //Mahasiswa dapat membuat sebuah TugasAkhir        
         m0.createTA("sistem informasi TA");
         /*optional menampilkan judul TA*/
-        System.out.println(m0.getTugasAkhir().getJudul());
+        System.out.println("judul TA sebelum    : "+m0.getTugasAkhir().getJudul());
         
         //Dosen dapat menambahkan dirinya menjadi pembimbing suatu tugas akhir dari seorang mahasiswa
         d0.GetKelompok("pbo").getAnggota("012").getTugasAkhir().setPembimbing(d0, 0);
@@ -36,13 +36,13 @@ public class Pbo {
         //Mahasiswa dapat merevisi judul TA
         m0.getTugasAkhir().setJudul("sisfo TA");
         /*optional menampilkan judul TA*/
-        System.out.println(m0.getTugasAkhir().getJudul());
+        System.out.println("judul TA setelah    : "+m0.getTugasAkhir().getJudul());
         
         //Mahasiswa memiliki status sudah lulus atau belum
-        System.out.println("Status sebelum  : "+m0.getStatus()); 
+        System.out.println("Status sebelum      : "+m0.getStatus()); 
         d0.GetKelompok("pbo").getAnggota("012").setStatus("Lulus");
         /*optional menampilkan status lulus atau belum lulus*/
-        System.out.println("Status sebelum  : "+m0.getStatus());
+        System.out.println("Status setelah      : "+m0.getStatus());
 
         //Dosen memiliki status bisa sebagai pembimbing 1 atau 2
         System.out.println(d0.getStatus());
