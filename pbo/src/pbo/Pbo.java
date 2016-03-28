@@ -19,10 +19,10 @@ public class Pbo {
     public static void main(String[] args) {
         /*------------------------- sprint 1 ------------------------- */
         System.out.println("Test");
-        Dosen d0 = new Dosen("Dosen0","AAA","SIDE");
-        Dosen d1 = new Dosen("Dosen1","BBB","SIDE");
-        Mahasiswa m0 = new Mahasiswa("Mahasiswa0","012","SIDE");
-        Mahasiswa m1 = new Mahasiswa("Mahasiswa1","123","SIDE");
+        Dosen d0 = new Dosen("Dosen0","AAA","SIDE","Dosen0","Dosen0");
+        Dosen d1 = new Dosen("Dosen1","BBB","SIDE","Dosen1","Dosen1");
+        Mahasiswa m0 = new Mahasiswa("Mahasiswa0","012","SIDE","Mahasiswa0","Mahasiswa0");
+        Mahasiswa m1 = new Mahasiswa("Mahasiswa1","123","SIDE","Mahasiswa1","Mahasiswa1");
         
         //Minimum Specification nomor 1. Dosen dapat membuat suatu kelompok TA dengan topik tertentu
         d0.CreateKelompokTA("pbo");

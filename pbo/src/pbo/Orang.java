@@ -15,13 +15,17 @@ public abstract class Orang {
     /*--- class orang full atribut, encapsulate ---*/
     private String nama;
     private String kk;
+    private String username;
+    private String password;
     /*--- end of class orang full atribut, encapsulate ---*/
     /*--- Constractor Orang ---*/
     
     /*------------------------- sprint 1 ------------------------- */
-    public Orang(String nama, String kk) {
+    public Orang(String nama, String kk, String username, String password) {
         this.nama = nama;
         this.kk = kk;
+        this.username = username;
+        this.password = password;
     }
     /*--- end of Constractor Orang ---*/
     /*--- getNama ---*/

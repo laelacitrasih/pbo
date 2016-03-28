@@ -20,8 +20,8 @@ public class Mahasiswa extends Orang {
     /*--- constractor Mahasiswa ---*/    
     
     /*------------------------- sprint 1 ------------------------- */
-    public Mahasiswa(String nama,String nim, String kk){
-        super(nama,kk);
+    public Mahasiswa(String nama,String nim, String kk, String username, String password){
+        super(nama,kk,username,password);
         this.NIM = nim;
         //membuat status mahasiswa, dalam kasus ini default status yakni belum lulus
         createStatus();

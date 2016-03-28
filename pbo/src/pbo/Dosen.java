@@ -24,8 +24,8 @@ public class Dosen extends Orang{
     
     /*------------------------- sprint 1 ------------------------- */
     /*--- constractor Dosen ---*/
-    public Dosen(String nama, String kode, String kk){
-        super(nama,kk);
+    public Dosen(String nama, String kode, String kk, String username, String password){
+        super(nama,kk,username,password);
         this.kode = kode;
     }
     /*--- end of constractor Dosen ---*/
