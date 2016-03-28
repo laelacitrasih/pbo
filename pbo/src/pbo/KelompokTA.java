@@ -20,6 +20,8 @@ public class KelompokTA {
     private Mahasiswa[] anggota = new Mahasiswa[2];
     private int nAnggota;
     /*--- end of class KelompokTA full atribut, encapsulate ---*/
+    
+    /*------------------------- sprint 1 ------------------------- */
     public KelompokTA(String topik){
         this.topik = topik;
     }
@@ -68,4 +70,12 @@ public class KelompokTA {
         }
     }
     /*--- end of remove anggota ---*/
+    /*------------------------- end of sprint 1 ------------------------- */
+    
+    /*------------------------- sprint 2 ------------------------- */
+    /*--- toString ---*/
+    //public String toString(){
+    //}
+    /*--- end of toString ---*/
+    /*------------------------- end of sprint 2 ------------------------- */
 }

@@ -18,6 +18,8 @@ public class TugasAkhir {
     private Dosen[] pembimbing = new Dosen[2];
     private String judul;
     /*--- end of class TugasAkhir full atribut, encapsulate ---*/
+    
+    /*------------------------- sprint 1 ------------------------- */
     /*--- constractor TugasAkhir ---*/
     public TugasAkhir(String judul){
         //this.judul = judul;
@@ -54,4 +56,12 @@ public class TugasAkhir {
         return null;
     }
     /*--- end of get pembimbing by kode dosen ---*/
+    /*------------------------- end of sprint 1 ------------------------- */
+    
+    /*------------------------- sprint 2 ------------------------- */
+    /*--- toString ---*/
+    //public String toString(){
+    //}
+    /*--- end of toString ---*/
+    /*------------------------- end of sprint 2 ------------------------- */
 }

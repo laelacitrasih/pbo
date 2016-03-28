@@ -17,6 +17,8 @@ public abstract class Orang {
     private String kk;
     /*--- end of class orang full atribut, encapsulate ---*/
     /*--- Constractor Orang ---*/
+    
+    /*------------------------- sprint 1 ------------------------- */
     public Orang(String nama, String kk) {
         this.nama = nama;
         this.kk = kk;
@@ -42,4 +44,12 @@ public abstract class Orang {
         this.kk = kk;
     }
     /*--- end of setKK ---*/
+    /*------------------------- end of sprint 1 ------------------------- */
+    
+    /*------------------------- sprint 2 ------------------------- */
+    /*--- toString ---*/
+    //public String toString(){
+    //}
+    /*--- end of toString ---*/
+    /*------------------------- end of sprint 2 ------------------------- */
 }

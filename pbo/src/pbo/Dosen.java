@@ -21,6 +21,8 @@ public class Dosen extends Orang{
     private int nTopik;
     private String status;
     /*--- end of class Dosen full atribut, encapsulate ---*/
+    
+    /*------------------------- sprint 1 ------------------------- */
     /*--- constractor Dosen ---*/
     public Dosen(String nama, String kode, String kk){
         super(nama,kk);
@@ -78,4 +80,13 @@ public class Dosen extends Orang{
         return status;
     }
     /*--- end of getStatus ---*/
+    /*------------------------- end of sprint 1 ------------------------- */
+    
+    /*------------------------- sprint 2 ------------------------- */
+    /*--- toString ---*/
+    //public String toString(){
+    //}
+    /*--- end of toString ---*/
+    /*------------------------- end of sprint 2 ------------------------- */
+    
 }	

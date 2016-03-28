@@ -18,6 +18,8 @@ public class Mahasiswa extends Orang {
     private String NIM;
     /*--- end of class mahasiswa full atribut, encapsulate ---*/
     /*--- constractor Mahasiswa ---*/    
+    
+    /*------------------------- sprint 1 ------------------------- */
     public Mahasiswa(String nama,String nim, String kk){
         super(nama,kk);
         this.NIM = nim;
@@ -60,4 +62,12 @@ public class Mahasiswa extends Orang {
         return status;
     }
     /*--- end of getStatus ---*/
+    /*------------------------- end of sprint 1 ------------------------- */
+    
+    /*------------------------- sprint 2 ------------------------- */
+    /*--- toString ---*/
+    //public String toString(){
+    //}
+    /*--- end of toString ---*/
+    /*------------------------- end of sprint 2 ------------------------- */
 }
