@@ -17,6 +17,7 @@ public class Pbo {
     7. Dosen memiliki status bisa sebagai pembimbing 1 atau 2
     */
     public static void main(String[] args) {
+        /*------------------------- sprint 1 ------------------------- */
         System.out.println("Test");
         Dosen d0 = new Dosen("Dosen0","AAA","SIDE");
         Dosen d1 = new Dosen("Dosen1","BBB","SIDE");
@@ -55,6 +56,7 @@ public class Pbo {
 
         //Minimum Specification nomor 7. Dosen memiliki status bisa sebagai pembimbing 1 atau 2
         System.out.println(d0.getStatus());
+        /*------------------------- end of sprint 1 ------------------------- */
     }
     
 }
