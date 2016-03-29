@@ -5,9 +5,7 @@
  - Laela Citra Asih 1301144300 (class KelompokTA, class orang)
  */
 package pbo;
-
 import java.util.Scanner;
-
 public class Aplikasi {
     /*
     Task (berdarkan https://drive.google.com/file/d/0BxMqes854yZcRlpEbFU4TmtudGM/view)
@@ -102,7 +100,7 @@ public class Aplikasi {
     }
     /*---  end of Buat method search untuk setiap array/list ---*/
     /*---  Buat method untuk setiap menu (1 menu = 1 method) ---*/
-    /*-- menu login --*/
+    /*-- menu 1 --*/
     public Orang Menu01(String username,String password){
         for(int i=0;i<nDosen;i++){
             if(daftarDosen[i].getUsername().equals(username)&daftarDosen[i].getPassword().equals(password)){
@@ -179,72 +177,102 @@ public class Aplikasi {
             System.out.println("0.exit");
             System.out.print("pilihan     : ");
             int a1 = sc.nextInt();
-            if (a1 == 1){
-                System.out.println("Main Menu");
-                System.out.print("Masukan Username    ");
-                String user = sc.next();
-                System.out.println("Username kamu adalah "+user);
-                System.out.print("Masukan Password    = ");
-                String pass = sc.next();
-                System.out.println("Password kamu adalah "+pass);
-                Orang b1 = Menu01(user,pass);
-                Dosen c1;
-                Mahasiswa c2;
-                if (b1 instanceof Dosen){
-                    System.out.println(" Menu Dosen");
-                    System.out.println(" 1. Create KelompokTA");
-                    System.out.println(" 2. Delete KelompokTA");
-                    System.out.println(" 3. Find KelompokTA");
-                    System.out.println(" 4. add member KelompokTA");
-                    System.out.println(" 5. find member KelompokTA");
-                    System.out.println(" 6. delete member KelompokTA");
-                    System.out.print(" input      : ");
-                    int a2 = sc.nextInt();
-                    switch(a2){
-                        case 1: //System.out.print("Topik : ");
-                            //String topik = sc.nextLine();
-                            //Menu11(this.getDosen(c1),topik);
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;    
-                        case 4:
-                            break;
-                        case 5:
-                            break;
-                        case 6:
-                            break;
-                        default:
-                            System.out.println("masukan hanya dari 1 - 6");
-                            break;
-                    }
-                } else {
-                    System.out.println(" Menu Mahasiswa");
-                    System.out.println(" 1. Create KelompokTA");
-                    System.out.println(" 2. Delete KelompokTA");
-                    System.out.println(" 3. Find KelompokTA");
-                    System.out.print(" input      : ");
-                    int a2 = sc.nextInt();
-                    switch(a2){
-                        case 1: 
-                            break;
-                        case 2:
-                            break;
-                        case 3:
-                            break;
-                        default:
-                            System.out.println("masukan hanya dari 1 - 3");
-                            break;
-                    }
-                    System.out.println("");
-                }
-            } else if (a1==0) {
-                System.out.println("exit");
-                ulang = false;
-            } else {
-                System.out.println("masukan angka 1 atau 0");
-                System.out.println();
+            switch (a1) {
+                case 1:
+                    System.out.println("Main Menu");
+                    System.out.print("Masukan Username    ");
+                    String user = sc.next();
+                    System.out.println("Username kamu adalah "+user);
+                    System.out.print("Masukan Password    = ");
+                    String pass = sc.next();
+                    System.out.println("Password kamu adalah "+pass);
+                    Orang b1 = Menu01(user,pass);
+                    if (b1.getClass() == Dosen.class){
+                        System.out.println(" Menu Dosen");
+                        System.out.println(" 1. Create KelompokTA");
+                        System.out.println(" 2. Delete KelompokTA");
+                        System.out.println(" 3. Find KelompokTA");
+                        System.out.println(" 4. add member KelompokTA");
+                        System.out.println(" 5. find member KelompokTA");
+                        System.out.println(" 6. delete member KelompokTA");
+                        System.out.print(" input      : ");
+                        int a2 = sc.nextInt();
+                        switch(a2){
+                            case 1:
+                                System.out.print("Topik : ");
+                                String topik = sc.nextLine();
+                                //Menu11(b1,topik);
+                                break;
+                            case 2:
+                                System.out.print("Nomor Kelompok : ");
+                                int n = sc.nextInt();
+                                //Menu12(b1,n);
+                                break;
+                            case 3:
+                                System.out.print("Nomor Kelompok : ");
+                                n = sc.nextInt();
+                                //Menu13(b1,n);
+                                break;
+                            case 4:
+                                System.out.print("Nomor Kelompok : ");
+                                n = sc.nextInt();
+                                //Menu14(b1,n,mahasiswa);
+                                break;
+                            case 5:
+                                System.out.print("Nomor Kelompok : ");
+                                n = sc.nextInt();
+                                System.out.print("NIM            : ");
+                                String nim = sc.nextLine();
+                                //Menu15(b1,n,nim);
+                                break;
+                            case 6:
+                                System.out.print("Nomor Kelompok : ");
+                                n = sc.nextInt();
+                                System.out.print("NIM            : ");
+                                nim = sc.nextLine();
+                                //Menu16(b1,n,nim);
+                                break;
+                            default:
+                                System.out.println("masukan hanya dari 1 - 6");
+                                break;
+                        }
+                    } else {
+                        System.out.println(" Menu Mahasiswa");
+                        System.out.println(" 1. Create KelompokTA");
+                        System.out.println(" 2. Delete KelompokTA");
+                        System.out.println(" 3. Find KelompokTA");
+                        System.out.print(" input      : ");
+                        int a2 = sc.nextInt();
+                        switch(a2){
+                            case 1:
+                                System.out.print("Judul            : ");
+                                String judul = sc.nextLine();
+                                //Menu21(b1,judul);
+                                break;
+                            case 2:
+                                System.out.print("nomor             : ");
+                                int n = sc.nextInt();
+                                //Menu21(b1,c1,n);
+                                break;
+                            case 3:
+                                System.out.print("nomor             : ");
+                                n = sc.nextInt();
+                                //Menu21(b1,c1,n);
+                                break;
+                            default:
+                                System.out.println("masukan hanya dari 1 - 3");
+                                break;
+                        }
+                        System.out.println("");
+                    }   break;
+                case 0:
+                    System.out.println("exit");
+                    ulang = false;
+                    break;
+                default:
+                    System.out.println("masukan angka 1 atau 0");
+                    System.out.println();
+                    break;
             }
         }while(ulang == true);
     }
