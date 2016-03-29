@@ -18,7 +18,7 @@ public class Pbo {
     */
     public static void main(String[] args) {
         /*------------------------- sprint 1 ------------------------- */
-        System.out.println("Test");
+        System.out.println("Sprint 1");
         Dosen d0 = new Dosen("Dosen0","AAA","SIDE","Dosen0","Dosen0");
         Dosen d1 = new Dosen("Dosen1","BBB","SIDE","Dosen1","Dosen1");
         Mahasiswa m0 = new Mahasiswa("Mahasiswa0","012","SIDE","Mahasiswa0","Mahasiswa0");
@@ -53,10 +53,16 @@ public class Pbo {
         System.out.println("Status sebelum      : "+m0.getStatus()); 
         d0.GetKelompok("pbo").getAnggota("012").setStatus("Lulus");
         System.out.println("Status setelah      : "+m0.getStatus());
-
+        System.out.println("end of Sprint 1");
         //Minimum Specification nomor 7. Dosen memiliki status bisa sebagai pembimbing 1 atau 2
         System.out.println(d0.getStatus());
         /*------------------------- end of sprint 1 ------------------------- */
+        /*------------------------- sprint 2 ------------------------- */
+        System.out.println("Sprint 2");
+        Aplikasi xxx = new Aplikasi();
+        xxx.MainMenu();
+        System.out.println("end of sprint 2");
+        /*------------------------- end of sprint 2 ------------------------- */
     }
     
 }

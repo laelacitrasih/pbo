@@ -171,24 +171,82 @@ public class Aplikasi {
     
     /*---  buatlah sebuah method "main menu" ---*/
     public void MainMenu(){
-        Scanner sc = new Scanner (System.in);
-        System.out.println("Main Menu");
-        System.out.println("1.Login");
-        System.out.println("0.exit");
-        System.out.print("pilihan     : ");
-        int a1 = sc.nextInt();
-        if (a1 == '1'){
+        boolean ulang = true;
+        do { 
+            Scanner sc = new Scanner (System.in);
             System.out.println("Main Menu");
-            System.out.println("Username    ");
-            String user = sc.nextLine();
-            System.out.println("Password    ");
-            String pass = sc.nextLine();
-            Orang b1 = Menu01(user,pass);
-            //if (b1 = Mahasiswa)
-        } else {
-            System.exit(0);
-        }
-        
+            System.out.println("1.Login");
+            System.out.println("0.exit");
+            System.out.print("pilihan     : ");
+            int a1 = sc.nextInt();
+            if (a1 == 1){
+                System.out.println("Main Menu");
+                System.out.print("Masukan Username    ");
+                String user = sc.next();
+                System.out.println("Username kamu adalah "+user);
+                System.out.print("Masukan Password    = ");
+                String pass = sc.next();
+                System.out.println("Password kamu adalah "+pass);
+                Orang b1 = Menu01(user,pass);
+                Dosen c1;
+                Mahasiswa c2;
+                if (b1 instanceof Dosen){
+                    System.out.println(" Menu Dosen");
+                    System.out.println(" 1. Create KelompokTA");
+                    System.out.println(" 2. Delete KelompokTA");
+                    System.out.println(" 3. Find KelompokTA");
+                    System.out.println(" 4. add member KelompokTA");
+                    System.out.println(" 5. find member KelompokTA");
+                    System.out.println(" 6. delete member KelompokTA");
+                    System.out.print(" input      : ");
+                    int a2 = sc.nextInt();
+                    switch(a2){
+                        case 1: //System.out.print("Topik : ");
+                            //String topik = sc.nextLine();
+                            //Menu11(this.getDosen(c1),topik);
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;    
+                        case 4:
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                            break;
+                        default:
+                            System.out.println("masukan hanya dari 1 - 6");
+                            break;
+                    }
+                } else {
+                    System.out.println(" Menu Mahasiswa");
+                    System.out.println(" 1. Create KelompokTA");
+                    System.out.println(" 2. Delete KelompokTA");
+                    System.out.println(" 3. Find KelompokTA");
+                    System.out.print(" input      : ");
+                    int a2 = sc.nextInt();
+                    switch(a2){
+                        case 1: 
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        default:
+                            System.out.println("masukan hanya dari 1 - 3");
+                            break;
+                    }
+                    System.out.println("");
+                }
+            } else if (a1==0) {
+                System.out.println("exit");
+                ulang = false;
+            } else {
+                System.out.println("masukan angka 1 atau 0");
+                System.out.println();
+            }
+        }while(ulang == true);
     }
     /*---  end of buatlah sebuah method "main menu" ---*/
     /*------------------------- end of sprint 2 ------------------------- */
