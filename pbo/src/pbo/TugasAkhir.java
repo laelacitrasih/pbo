@@ -60,8 +60,10 @@ public class TugasAkhir {
     
     /*------------------------- sprint 2 ------------------------- */
     /*--- toString ---*/
-    //public String toString(){
-    //}
+    public String toString(){
+        String x = "Judul\t="+this.getJudul();
+        return x;
+    }
     /*--- end of toString ---*/
     /*------------------------- end of sprint 2 ------------------------- */
 }

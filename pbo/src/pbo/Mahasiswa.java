@@ -66,8 +66,13 @@ public class Mahasiswa extends Orang {
     
     /*------------------------- sprint 2 ------------------------- */
     /*--- toString ---*/
-    //public String toString(){
-    //}
+    public String toString(){
+        String x ="Nama\t="+this.getNama()
+                +"\nNIM\t="+this.getNIM()
+                +"\nKK\t="+this.getKk()
+                +"\nStatus\t="+this.getStatus();
+        return x;
+    }
     /*--- end of toString ---*/
     /*------------------------- end of sprint 2 ------------------------- */
 }

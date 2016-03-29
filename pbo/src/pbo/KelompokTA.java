@@ -74,8 +74,11 @@ public class KelompokTA {
     
     /*------------------------- sprint 2 ------------------------- */
     /*--- toString ---*/
-    //public String toString(){
-    //}
+    public String toString(){
+        String x = "Topik\t="+this.getTopik()
+                +"\nMahasiswa\t="+this.getAnggota(nAnggota);
+        return x;
+    }
     /*--- end of toString ---*/
     /*------------------------- end of sprint 2 ------------------------- */
 }

@@ -47,13 +47,27 @@ public abstract class Orang {
     public void setKk(String kk) {
         this.kk = kk;
     }
+    /*--- getKK ---*/
+    public String getUsername() {
+        return username;
+    }
+    /*--- end of getKK ---*/
+    /*--- SetKK ---*/
+    public String getPassword() {
+        return password;
+    }
     /*--- end of setKK ---*/
     /*------------------------- end of sprint 1 ------------------------- */
     
     /*------------------------- sprint 2 ------------------------- */
     /*--- toString ---*/
-    //public String toString(){
-    //}
+    public String toString(){
+        String x = ""+this.getNama()
+                +"\nKK\t="+this.getKk()
+                +"\nUsername\t="+this.getUsername()
+                +"\nPassword\t="+this.getPassword();
+        return x;
+    }
     /*--- end of toString ---*/
     /*------------------------- end of sprint 2 ------------------------- */
 }
