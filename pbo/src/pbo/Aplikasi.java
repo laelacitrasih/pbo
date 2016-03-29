@@ -184,6 +184,7 @@ public class Aplikasi {
             System.out.println("Password    ");
             String pass = sc.nextLine();
             Orang b1 = Menu01(user,pass);
+            //if (b1 = Mahasiswa)
         } else {
             System.exit(0);
         }
