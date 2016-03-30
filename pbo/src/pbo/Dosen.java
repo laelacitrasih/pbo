@@ -94,4 +94,4 @@ public class Dosen extends Orang{
     /*--- end of toString ---*/
     /*------------------------- end of sprint 2 ------------------------- */
     
-}	
+}

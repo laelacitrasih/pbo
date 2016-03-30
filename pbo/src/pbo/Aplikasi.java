@@ -26,9 +26,9 @@ public class Aplikasi {
     /*------------------------- sprint 2 ------------------------- */
     /*--- Menampung array/list objek yang dibutuhkan ---*/
     private Dosen[] daftarDosen = new Dosen[10];
-    private int nDosen;
+    private int nDosen = 0;
     private Mahasiswa[] daftarMahasiswa = new Mahasiswa[10];
-    private int nMahasiswa;
+    private int nMahasiswa = 0;
     /*--- end of Menampung array/list objek yang dibutuhkan ---*/
     /*--- toString ---*/
     public String toString(){
@@ -47,7 +47,7 @@ public class Aplikasi {
     public void addMahasiswa(String nama,String nim, String kk, String username, String password){
         if(nMahasiswa < daftarMahasiswa.length){
             daftarMahasiswa[nMahasiswa]= new Mahasiswa(nama,nim,kk,username,password);
-            nDosen++;
+            nMahasiswa++;
         }
     }
     /*---  end of Buat method add/create untuk setiap array/list ---*/
@@ -127,8 +127,9 @@ public class Aplikasi {
     }
     /*-- end of menu delete KelompokTA --*/
     /*-- menu find KelompokTA --*/
-    public void Menu13(Dosen d, int n){
-        d.GetKelompok(n);
+    public KelompokTA Menu13(Dosen d, int n){
+        KelompokTA a = d.GetKelompok(n);
+        return a;
     }
     /*-- end of menu find KelompokTA --*/
     /*-- menu add member KelompokTA --*/
@@ -137,8 +138,8 @@ public class Aplikasi {
     }
     /*-- end of menu add member KelompokTA --*/
     /*-- menu find member KelompokTA --*/
-    public void Menu15(Dosen d, int n,String NIM){
-        d.GetKelompok(n).getAnggota(NIM);
+    public Mahasiswa Menu15(Dosen d, int n,String NIM){
+        return d.GetKelompok(n).getAnggota(NIM);
     }
     /*-- end of menu find member KelompokTA --*/
     /*-- menu delete member KelompokTA --*/
@@ -160,8 +161,14 @@ public class Aplikasi {
     }
     /*-- end of menu set Pembimbing --*/
     /*-- menu get Pembimbing --*/
-    public void Menu23(Mahasiswa m, int i){
-        m.getTugasAkhir().getPembimbing(i);
+    public Dosen Menu23(Mahasiswa m, String kode){
+        for (int i = 0;i < 2;i++){
+            if (m.getTugasAkhir().getPembimbing(i) != null){
+                if (m.getTugasAkhir().getPembimbing(i).getKode().equals(kode))
+                    return m.getTugasAkhir().getPembimbing(i);
+            }
+        }
+        return null;
     }
     /*-- end of menu get Pembimbing --*/
     /*-- end of menu student only --*/
@@ -172,6 +179,7 @@ public class Aplikasi {
         boolean ulang = true;
         do { 
             Scanner sc = new Scanner (System.in);
+            Scanner sc2 = new Scanner (System.in);
             System.out.println("Main Menu");
             System.out.println("1.Login");
             System.out.println("0.exit");
@@ -180,91 +188,122 @@ public class Aplikasi {
             switch (a1) {
                 case 1:
                     System.out.println("Main Menu");
-                    System.out.print("Masukan Username    ");
+                    System.out.print("Masukan Username    = ");
                     String user = sc.next();
                     System.out.println("Username kamu adalah "+user);
                     System.out.print("Masukan Password    = ");
                     String pass = sc.next();
                     System.out.println("Password kamu adalah "+pass);
                     Orang b1 = Menu01(user,pass);
-                    if (b1.getClass() == Dosen.class){
-                        System.out.println(" Menu Dosen");
-                        System.out.println(" 1. Create KelompokTA");
-                        System.out.println(" 2. Delete KelompokTA");
-                        System.out.println(" 3. Find KelompokTA");
-                        System.out.println(" 4. add member KelompokTA");
-                        System.out.println(" 5. find member KelompokTA");
-                        System.out.println(" 6. delete member KelompokTA");
-                        System.out.print(" input      : ");
-                        int a2 = sc.nextInt();
-                        switch(a2){
-                            case 1:
-                                System.out.print("Topik : ");
-                                String topik = sc.nextLine();
-                                //Menu11(b1,topik);
-                                break;
-                            case 2:
-                                System.out.print("Nomor Kelompok : ");
-                                int n = sc.nextInt();
-                                //Menu12(b1,n);
-                                break;
-                            case 3:
-                                System.out.print("Nomor Kelompok : ");
-                                n = sc.nextInt();
-                                //Menu13(b1,n);
-                                break;
-                            case 4:
-                                System.out.print("Nomor Kelompok : ");
-                                n = sc.nextInt();
-                                //Menu14(b1,n,mahasiswa);
-                                break;
-                            case 5:
-                                System.out.print("Nomor Kelompok : ");
-                                n = sc.nextInt();
-                                System.out.print("NIM            : ");
-                                String nim = sc.nextLine();
-                                //Menu15(b1,n,nim);
-                                break;
-                            case 6:
-                                System.out.print("Nomor Kelompok : ");
-                                n = sc.nextInt();
-                                System.out.print("NIM            : ");
-                                nim = sc.nextLine();
-                                //Menu16(b1,n,nim);
-                                break;
-                            default:
-                                System.out.println("masukan hanya dari 1 - 6");
-                                break;
-                        }
+                    if (b1 != null){
+                        if (b1.getClass() == Dosen.class){
+                            int a2 = 0;
+                            Dosen d = (Dosen) b1;
+                            while (a2 != 7){
+                                System.out.println(" Menu Dosen");
+                                System.out.println(" 1. Create KelompokTA");
+                                System.out.println(" 2. Delete KelompokTA");
+                                System.out.println(" 3. Find KelompokTA");
+                                System.out.println(" 4. add member KelompokTA");
+                                System.out.println(" 5. find member KelompokTA");
+                                System.out.println(" 6. delete member KelompokTA");
+                                System.out.println(" 7. keluar");
+                                System.out.print(" input      : ");
+                                a2 = sc.nextInt();
+                                switch(a2){
+                                    case 1:
+                                        System.out.print("Topik : ");
+                                        String topik = sc2.nextLine();
+                                        Menu11(d,topik);
+                                        break;
+                                    case 2:
+                                        System.out.print("Nomor Kelompok : ");
+                                        int n = sc.nextInt();
+                                        Menu12(d,n);
+                                        break;
+                                    case 3:
+                                        System.out.print("Nomor Kelompok : ");
+                                        n = sc.nextInt();
+                                        KelompokTA a = Menu13(d,n);
+                                        System.out.println(a.toString());
+                                        break;
+                                    case 4:
+                                        for (int i = 0;i < nMahasiswa;i++){
+                                            System.out.println(daftarMahasiswa[i].toString());
+                                        }
+                                        System.out.print("Nomor Kelompok : ");
+                                        n = sc.nextInt();
+                                        System.out.print("NIM            : ");
+                                        String nim = sc2.nextLine();
+                                        Menu14(d,n,getMahasiswa(nim));
+                                        break;
+                                    case 5:
+                                        System.out.print("Nomor Kelompok : ");
+                                        n = sc.nextInt();
+                                        System.out.print("NIM            : ");
+                                        nim = sc2.nextLine();
+                                        Mahasiswa m = Menu15(d,n,nim);
+                                        if (m != null)
+                                            System.out.println(m.toString());
+                                        break;
+                                    case 6:
+                                        System.out.print("Nomor Kelompok : ");
+                                        n = sc.nextInt();
+                                        System.out.print("NIM            : ");
+                                        nim = sc2.nextLine();
+                                        if (Menu15(d,n,nim) != null)
+                                            Menu16(d,n,nim);
+                                        break;
+                                    default:
+                                        System.out.println("masukan hanya dari 1 - 6");
+                                        break;
+                                }
+                            }
+                        } else if (b1.getClass() == Mahasiswa.class) {
+                            int a2 = 0;
+                            Mahasiswa m = (Mahasiswa) b1;
+                            while (a2 != 4){
+                                System.out.println(" Menu Mahasiswa");
+                                System.out.println(" 1. Create TA");
+                                System.out.println(" 2. Set Pembimbing");
+                                System.out.println(" 3. Get Pembimbing");
+                                System.out.println(" 4. Keluar");
+                                System.out.print(" input      : ");
+                                a2 = sc.nextInt();
+
+                                switch(a2){
+                                    case 1:
+                                        System.out.print("Judul            : ");
+                                        String judul = sc2.nextLine();
+                                        Menu21(m,judul);
+                                        break;
+                                    case 2:
+                                        for(int i = 0;i < nDosen;i++){
+                                            System.out.println(daftarDosen[i].toString());
+                                        }
+                                        System.out.print("Kode Dosen dipilih : ");
+                                        String kode = sc2.nextLine();
+                                        System.out.print("Set Pembimbing ke : ");
+                                        int no = sc.nextInt();
+                                        Menu22(m,getDosen(kode),no-1);
+                                        break;
+                                    case 3:
+                                        System.out.print("Kode Dosen dipilih : ");
+                                        kode = sc2.nextLine();
+                                        Dosen d = Menu23(m,kode);
+                                        if (d != null)
+                                            System.out.println(d.toString());
+                                        break;
+                                    default:
+                                        System.out.println("masukan hanya dari 1 - 3");
+                                        break;
+                                }
+                                System.out.println("");
+                            }
+                        } break;
                     } else {
-                        System.out.println(" Menu Mahasiswa");
-                        System.out.println(" 1. Create KelompokTA");
-                        System.out.println(" 2. Delete KelompokTA");
-                        System.out.println(" 3. Find KelompokTA");
-                        System.out.print(" input      : ");
-                        int a2 = sc.nextInt();
-                        switch(a2){
-                            case 1:
-                                System.out.print("Judul            : ");
-                                String judul = sc.nextLine();
-                                //Menu21(b1,judul);
-                                break;
-                            case 2:
-                                System.out.print("nomor             : ");
-                                int n = sc.nextInt();
-                                //Menu21(b1,c1,n);
-                                break;
-                            case 3:
-                                System.out.print("nomor             : ");
-                                n = sc.nextInt();
-                                //Menu21(b1,c1,n);
-                                break;
-                            default:
-                                System.out.println("masukan hanya dari 1 - 3");
-                                break;
-                        }
-                        System.out.println("");
-                    }   break;
+                        System.out.println("Username atau Password salah");
+                    } break;
                 case 0:
                     System.out.println("exit");
                     ulang = false;

@@ -76,7 +76,10 @@ public class KelompokTA {
     /*--- toString ---*/
     public String toString(){
         String x = "Topik\t="+this.getTopik()
-                +"\nMahasiswa\t="+this.getAnggota(nAnggota);
+                +"\nMahasiswa\t=\n";
+        for(int i = 0;i<nAnggota;i++){
+            x = x + this.getAnggota(i).toString() + "\n";
+        }
         return x;
     }
     /*--- end of toString ---*/

@@ -60,6 +60,11 @@ public class Pbo {
         /*------------------------- sprint 2 ------------------------- */
         System.out.println("Sprint 2");
         Aplikasi xxx = new Aplikasi();
+        xxx.addDosen("Dosen0","AAA","SIDE","Dosen0","Dosen0");
+        xxx.addDosen("Dosen1","BBB","SIDE","Dosen1","Dosen1");
+        xxx.addMahasiswa("Mahasiswa0","012","SIDE","Mahasiswa0","Mahasiswa0");
+        xxx.addMahasiswa("Mahasiswa1","123","SIDE","Mahasiswa1","Mahasiswa1");
+        
         xxx.MainMenu();
         System.out.println("end of sprint 2");
         /*------------------------- end of sprint 2 ------------------------- */
