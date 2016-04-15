@@ -23,17 +23,6 @@
               <Component id="LocationLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="GetPembimbingButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="CreateTAButton" alignment="0" max="32767" attributes="0"/>
-                      <Component id="SetPembimbingButton" alignment="0" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="158" max="32767" attributes="0"/>
-          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -44,44 +33,20 @@
                   <Component id="LocationLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="judulLabel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-              <Component id="CreateTAButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="SetPembimbingButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="GetPembimbingButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="154" max="32767" attributes="0"/>
+              <EmptySpace pref="275" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="LocationLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Main Menu | Mahasiswa"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JLabel" name="judulLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Sistem Informasi Pengolahan Data TA"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="CreateTAButton">
+    <Component class="javax.swing.JLabel" name="LocationLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Create TA"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreateTAButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="SetPembimbingButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Set Pembimbing"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="GetPembimbingButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Get Pembimbing"/>
+        <Property name="text" type="java.lang.String" value="Main Menu | Mahasiswa"/>
       </Properties>
     </Component>
   </SubComponents>
