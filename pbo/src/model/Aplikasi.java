@@ -4,7 +4,7 @@
  - Ika Setyasari 1301144020 (class Dosen)
  - Laela Citra Asih 1301144300 (class KelompokTA, class orang)
  */
-package pbo;
+package model;
 import java.util.Scanner;
 public class Aplikasi {
     /*
