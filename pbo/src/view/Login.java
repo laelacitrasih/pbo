@@ -26,8 +26,6 @@ public class Login extends javax.swing.JPanel {
 
         passLabel.setText("Password");
 
-        userTextField.setText("                                      ");
-
         submitButton.setText("Submit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -81,11 +79,11 @@ public class Login extends javax.swing.JPanel {
         passTextField.addActionListener(e);
         submitButton.addActionListener(e);
     }
-    public JTextField getUserField() {
-        return userTextField;
+    public String getUserField() {
+        return userTextField.getText();
     }
-    public JPasswordField getPassField() {
-        return passTextField;
+    public String getPassField() {
+        return passTextField.getText();
     }
     public JButton getSubmitButton() {
         return submitButton;

@@ -49,7 +49,9 @@ public class Dosen extends Orang{
     /*--- end of setKode ---*/
     /*--- getKelompok by index ---*/
     public KelompokTA GetKelompok(int n){
-        return topikTA[n];
+        if (n < nTopik)
+            return topikTA[n];
+        else return null;
     }
     /*--- end of getKelompok by index ---*/
     /*--- getKelompok by topik ---*/
@@ -61,13 +63,24 @@ public class Dosen extends Orang{
         }
         return null;
     }
+    public String[] getAllTopikTA(){
+        String[] a = new String[nTopik];
+        for(int i=0;i<nTopik;i++){
+            a[i] = topikTA[i].getTopik();
+        }
+        return a;
+    }
     /*--- end of getKelompok by topik ---*/
     /*--- deleteKelompok ---*/
     public void deleteKelompok(int n){
-        for(int i=n;i<nTopik-1;i++){
-                topikTA[i]=topikTA[i+1];
-            }
-        nTopik--;
+        if (n < nTopik&&n >= 0){
+            for(int i=n;i<nTopik-1;i++){
+                    topikTA[i]=topikTA[i+1];
+                }
+            topikTA[nTopik] = null;
+            //System.out.println(topikTA[nTopik].getTopik());
+            nTopik--;
+        }
     }
     /*--- end of deleteKelompok ---*/
     /*--- setStatus ---*/

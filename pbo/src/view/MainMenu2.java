@@ -3,8 +3,8 @@ package view;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
-public class MainMenuB extends javax.swing.JPanel {
-    public MainMenuB() {
+public class MainMenu2 extends javax.swing.JPanel {
+    public MainMenu2() {
         initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -19,7 +19,7 @@ public class MainMenuB extends javax.swing.JPanel {
 
         LocationLabel.setText("Main Menu | Mahasiswa");
 
-        judulLabel.setText("Sistem Informasi Pengolahan Data TA");
+        judulLabel.setText("Sisfo Pengolahan Data TA");
 
         CreateTAButton.setText("Create TA");
         CreateTAButton.addActionListener(new java.awt.event.ActionListener() {
@@ -39,17 +39,17 @@ public class MainMenuB extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(judulLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addComponent(LocationLabel)
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(GetPembimbingButton)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(CreateTAButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SetPembimbingButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(158, Short.MAX_VALUE))
+                        .addComponent(SetPembimbingButton, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(140, 140, 140))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -64,7 +64,7 @@ public class MainMenuB extends javax.swing.JPanel {
                 .addComponent(SetPembimbingButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(GetPembimbingButton)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void CreateTAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateTAButtonActionPerformed

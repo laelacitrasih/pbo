@@ -98,6 +98,16 @@ public class Aplikasi {
             nMahasiswa--;
         }
     }
+    public String[] getAllTA(Dosen d){
+        return d.getAllTopikTA();
+    }
+    public String[] getNIMMhs(){
+        String[] s = new String[nMahasiswa];
+        for (int i = 0;i < nMahasiswa;i++){
+            s[i] = daftarMahasiswa[i].getNIM();
+        }
+        return s;
+    }
     /*---  end of Buat method search untuk setiap array/list ---*/
     /*---  Buat method untuk setiap menu (1 menu = 1 method) ---*/
     /*-- menu 1 --*/

@@ -22,35 +22,42 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+              <Component id="judulLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="LocationLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="nomorTopikTALabel" pref="170" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="nomorTopikTATextField" min="-2" pref="200" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="278" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="backButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="addButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="findButton" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="namaTopikTALabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="judulLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="DataKelompokTALabel" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="LocationLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="namaTopikTATextField" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="isiScrollPane" alignment="0" pref="200" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
+                          <Component id="DataKelompokTALabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="DataKelompokTALabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="57" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="isiScrollPane" max="32767" attributes="0"/>
+                          <Component id="hasilScrollPane2" pref="0" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
+                  <Component id="jSeparator1" alignment="1" max="32767" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -58,28 +65,33 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="LocationLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="judulLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="LocationLabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="judulLabel" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="namaTopikTATextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="namaTopikTALabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nomorTopikTALabel" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                  <Component id="nomorTopikTATextField" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="addButton" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="backButton" min="-2" max="-2" attributes="0"/>
+                  <Component id="findButton" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="DataKelompokTALabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="hasilScrollPane2" min="-2" pref="22" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="DataKelompokTALabel" min="-2" max="-2" attributes="0"/>
                   <Component id="isiScrollPane" min="-2" pref="50" max="-2" attributes="0"/>
+                  <Component id="DataKelompokTALabel" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="21" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,18 +104,8 @@
     </Component>
     <Component class="javax.swing.JLabel" name="LocationLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Create Kelompok TA| Dosen"/>
+        <Property name="text" type="java.lang.String" value="Find Kelompok TA| Dosen"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="namaTopikTALabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Nama Topik TA"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="namaTopikTATextField">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="namaTopikTATextFieldActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="backButton">
       <Properties>
@@ -113,10 +115,20 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="addButton">
+    <Component class="javax.swing.JButton" name="findButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Add"/>
+        <Property name="text" type="java.lang.String" value="Find"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="nomorTopikTALabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nomor Topik TA"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="nomorTopikTATextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomorTopikTATextFieldActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="DataKelompokTALabel">
       <Properties>
@@ -128,6 +140,27 @@
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JList" name="isiList">
+          <Properties>
+            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="DataKelompokTALabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hasil Pencarian"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="hasilScrollPane2">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JList" name="hasilList">
           <Properties>
             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
               <StringArray count="0"/>

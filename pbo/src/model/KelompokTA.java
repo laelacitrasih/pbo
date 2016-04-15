@@ -83,5 +83,9 @@ public class KelompokTA {
         return x;
     }
     /*--- end of toString ---*/
+    public Mahasiswa[] getAllAnggota(){
+        return anggota;
+    }
+            
     /*------------------------- end of sprint 2 ------------------------- */
 }

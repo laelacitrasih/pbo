@@ -1,10 +1,12 @@
 package view;
 
+import controller.*;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import model.Aplikasi;
 
-public class MainMenuA extends javax.swing.JPanel {
-    public MainMenuA() {
+public class MainMenu1 extends javax.swing.JPanel {
+    public MainMenu1() {
         initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -30,9 +32,11 @@ public class MainMenuA extends javax.swing.JPanel {
 
         LocationLabel.setText("Main Menu | Dosen");
 
-        judulLabel.setText("Sistem Informasi Pengolahan Data TA");
+        judulLabel.setText("Sisfo Pengolahan Data TA");
 
         CreateKelompokTAButton.setText("Create Kelompok TA");
+        CreateKelompokTAButton.setMaximumSize(new java.awt.Dimension(117, 23));
+        CreateKelompokTAButton.setMinimumSize(new java.awt.Dimension(117, 23));
         CreateKelompokTAButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CreateKelompokTAButtonActionPerformed(evt);
@@ -40,28 +44,28 @@ public class MainMenuA extends javax.swing.JPanel {
         });
 
         DeleteKelompokTAButton.setText("Delete Kelompok TA");
+        DeleteKelompokTAButton.setMaximumSize(new java.awt.Dimension(117, 23));
+        DeleteKelompokTAButton.setMinimumSize(new java.awt.Dimension(117, 23));
+        DeleteKelompokTAButton.setPreferredSize(new java.awt.Dimension(117, 23));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(judulLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LocationLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(CreateKelompokTAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeleteKelompokTAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FindKelompokTAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AddMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DeleteMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FindMemberButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(judulLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
+                        .addComponent(LocationLabel)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(133, 133, 133)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CreateKelompokTAButton)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(FindMemberButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DeleteMemberButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(AddMemberButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FindKelompokTAButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(DeleteKelompokTAButton, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(138, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -71,9 +75,9 @@ public class MainMenuA extends javax.swing.JPanel {
                     .addComponent(LocationLabel)
                     .addComponent(judulLabel))
                 .addGap(40, 40, 40)
-                .addComponent(CreateKelompokTAButton)
+                .addComponent(CreateKelompokTAButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DeleteKelompokTAButton)
+                .addComponent(DeleteKelompokTAButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(FindKelompokTAButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -82,7 +86,7 @@ public class MainMenuA extends javax.swing.JPanel {
                 .addComponent(DeleteMemberButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(FindMemberButton)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void CreateKelompokTAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateKelompokTAButtonActionPerformed
