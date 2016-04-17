@@ -228,7 +228,7 @@ public class Controller extends MouseAdapter implements ActionListener {
             } else if (source.equals(a2.getGetPembimbingButton())) {
                 currentView = "11";
                 view.getCardLayout().show(mainPanel, currentView);
-                //a23.setListIsi(model.getAllTA(d));
+                a23.setListIsi(model.getKodeDosen());
             }
         } else if (currentView.equals("9")) {
             //current view = Create TA
@@ -264,7 +264,11 @@ public class Controller extends MouseAdapter implements ActionListener {
                 String kodeDosen = a23.getKodeDosenTATextField();
                 Dosen d = model.Menu23(m, kodeDosen);
                 a23.reset();
-                a23.setListIsi(model.getAllTA(d));
+                int i = m.getTugasAkhir().getNomorPembimbing(kodeDosen);
+                if (i == 0)
+                    a23.setSelectedHasil("Bukan Pembimbing");
+                else
+                    a23.setSelectedHasil("Pembimbing ke-"+i);
             }
         }
     }

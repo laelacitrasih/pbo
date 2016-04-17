@@ -118,7 +118,7 @@ public class GetPembimbing extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DataKodeDosenLabel)
                     .addComponent(kodeDosenScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void kodeDosenTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodeDosenTextFieldActionPerformed
@@ -159,6 +159,9 @@ public class GetPembimbing extends javax.swing.JPanel {
     }
     public void setListIsi(String list[]) {
         kodeDosenList.setListData(list);
+    }
+    public void setSelectedHasil(String s) {
+        hasilTextArea.setText(s);
     }
     public void addListener(ActionListener e) {
         kodeDosenTextField.addActionListener(e);

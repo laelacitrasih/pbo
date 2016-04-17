@@ -55,6 +55,14 @@ public class TugasAkhir {
         }
         return null;
     }
+    public int getNomorPembimbing(String kode){
+        for(int i=0;i<2;i++){
+            if (pembimbing[i].getKode().equals(kode)){
+                return i+1;
+            }
+        }
+        return 0;
+    }
     /*--- end of get pembimbing by kode dosen ---*/
     /*------------------------- end of sprint 1 ------------------------- */
     

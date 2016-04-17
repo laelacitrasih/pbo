@@ -111,6 +111,13 @@ public class Aplikasi {
         }
         return s;
     }
+    public String[] getKodeDosen(){
+        String[] s = new String[nDosen];
+        for (int i = 0;i < nDosen;i++){
+            s[i] = daftarDosen[i].getKode();
+        }
+        return s;
+    }
     /*---  end of Buat method search untuk setiap array/list ---*/
     /*---  Buat method untuk setiap menu (1 menu = 1 method) ---*/
     /*-- menu 1 --*/
