@@ -121,13 +121,19 @@ public class Controller extends MouseAdapter implements ActionListener {
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a1.getAddMemberButton())) {
                 a14.setListIsi(model.getAllTA(d));
+                a14.setListIsi1(model.getAllTA(d));
                 a14.setListNim(model.getNIMMhs());
                 currentView = "5";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a1.getDeleteMemberButton())) {
+                a15.setListIsi(model.getAllTA(d));
+                a15.setListIsi1(model.getAllTA(d));
+                a15.setListNim(model.getNIMMhs());
                 currentView = "6";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a1.getFindMemberButton())) {
+                a16.setListIsi(model.getAllTA(d));
+                a16.setListNim(model.getNIMMhs());
                 currentView = "7";
                 view.getCardLayout().show(mainPanel, currentView);
             }
@@ -177,6 +183,7 @@ public class Controller extends MouseAdapter implements ActionListener {
                 model.Menu14(d, n-1, model.getMahasiswa(m));
                 a14.reset();
                 a14.setListIsi(model.getAllTA(d));
+                a14.setListIsi1(model.getAllTA(d));
             } 
         } else if (currentView.equals("6")) {
             //current view = Delete Member
@@ -184,8 +191,12 @@ public class Controller extends MouseAdapter implements ActionListener {
                 currentView = "1";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a15.getDeleteButton())) {
-                //model.Menu11(d, topik);
+                int n = a15.getNomorTopikTATextField();
+                String m = a15.getNIMTextField();
+                model.Menu15(d, n-1,m);
                 a15.reset();
+                a15.setListIsi(model.getAllTA(d));
+                a15.setListIsi1(model.getAllTA(d));
             } 
         } else if (currentView.equals("7")) {
             //current view = Find Member
@@ -193,11 +204,14 @@ public class Controller extends MouseAdapter implements ActionListener {
                 currentView = "1";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a16.getFindButton())) {
-                //model.Menu11(d, topik);
+                int n = a16.getNomorTopikTATextField();
+                String m = a16.getNIMTextField();
+                model.Menu16(d, n-1, m);
                 a16.reset();
+                a16.setListIsi(model.getAllTA(d));
             } 
         } else if (currentView.equals("8")) {
-            //current view = Main Menu 1 (Dosen)
+            //current view = Main Menu 2 (Mahasiswa)
             if (source.equals(a2.getCreateTAButton())) {
                 currentView = "9";
                 view.getCardLayout().show(mainPanel, currentView);

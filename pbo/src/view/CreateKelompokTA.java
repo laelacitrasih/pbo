@@ -1,9 +1,7 @@
 package view;
-
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-
 public class CreateKelompokTA extends javax.swing.JPanel {
     public CreateKelompokTA() {
         initComponents();
@@ -18,10 +16,10 @@ public class CreateKelompokTA extends javax.swing.JPanel {
         namaTopikTATextField = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
         addButton = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
         DataKelompokTALabel = new javax.swing.JLabel();
         isiScrollPane = new javax.swing.JScrollPane();
         isiList = new javax.swing.JList<>();
-        jSeparator1 = new javax.swing.JSeparator();
 
         setPreferredSize(new java.awt.Dimension(400, 115));
 
@@ -99,16 +97,13 @@ public class CreateKelompokTA extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DataKelompokTALabel)
                     .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void namaTopikTATextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaTopikTATextFieldActionPerformed
     }//GEN-LAST:event_namaTopikTATextFieldActionPerformed
-
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DataKelompokTALabel;
     private javax.swing.JLabel LocationLabel;
@@ -143,9 +138,5 @@ public class CreateKelompokTA extends javax.swing.JPanel {
         namaTopikTATextField.addActionListener(e);
         addButton.addActionListener(e);
         backButton.addActionListener(e);
-    }
-
-    public void setListHasil(String[] s) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

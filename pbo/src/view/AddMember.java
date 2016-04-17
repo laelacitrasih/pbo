@@ -13,21 +13,24 @@ public class AddMember extends javax.swing.JPanel {
 
         judulLabel = new javax.swing.JLabel();
         LocationLabel = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
         nomorTopikTALabel = new javax.swing.JLabel();
         nomorTopikTATextField = new javax.swing.JTextField();
         nimLabel = new javax.swing.JLabel();
         nimTextField = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
         addButton = new javax.swing.JButton();
-        hasilScrollPane2 = new javax.swing.JScrollPane();
-        hasilTextArea = new javax.swing.JTextArea();
         isiScrollPane = new javax.swing.JScrollPane();
         isiList = new javax.swing.JList<>();
+        hasilScrollPane2 = new javax.swing.JScrollPane();
+        hasilTextArea = new javax.swing.JTextArea();
         jSeparator2 = new javax.swing.JSeparator();
+        DataKelompokTALabel = new javax.swing.JLabel();
+        isiScrollPane1 = new javax.swing.JScrollPane();
+        isiList1 = new javax.swing.JList<>();
         DataNIMLabel = new javax.swing.JLabel();
         nimScrollPane = new javax.swing.JScrollPane();
         nimList = new javax.swing.JList<>();
-        jSeparator3 = new javax.swing.JSeparator();
 
         setPreferredSize(new java.awt.Dimension(400, 115));
 
@@ -60,11 +63,15 @@ public class AddMember extends javax.swing.JPanel {
 
         addButton.setText("Add");
 
+        isiScrollPane.setViewportView(isiList);
+
         hasilTextArea.setColumns(20);
         hasilTextArea.setRows(5);
         hasilScrollPane2.setViewportView(hasilTextArea);
 
-        isiScrollPane.setViewportView(isiList);
+        DataKelompokTALabel.setText("Data Kelompok (Topik) TA");
+
+        isiScrollPane1.setViewportView(isiList1);
 
         DataNIMLabel.setText("Data NIM Mahasiswa");
 
@@ -76,34 +83,44 @@ public class AddMember extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator2)
+                    .addComponent(jSeparator3)
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(nomorTopikTALabel)
                             .addComponent(judulLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LocationLabel, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(nomorTopikTATextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(nimLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 159, Short.MAX_VALUE)
+                                .addComponent(LocationLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(56, 56, 56)
+                                .addComponent(nomorTopikTATextField))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DataKelompokTALabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DataNIMLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(nimTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(DataNIMLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(nimScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(isiScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(nimScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(backButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(addButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nimLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(hasilScrollPane2)
+                            .addComponent(nimTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -135,20 +152,23 @@ public class AddMember extends javax.swing.JPanel {
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nimScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DataNIMLabel))
+                    .addComponent(DataKelompokTALabel)
+                    .addComponent(isiScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DataNIMLabel)
+                    .addComponent(nimScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void nomorTopikTATextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomorTopikTATextFieldActionPerformed
     }//GEN-LAST:event_nomorTopikTATextFieldActionPerformed
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
     private void nimTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nimTextFieldActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_nimTextFieldActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DataKelompokTALabel;
     private javax.swing.JLabel DataNIMLabel;
     private javax.swing.JLabel LocationLabel;
     private javax.swing.JButton addButton;
@@ -156,7 +176,9 @@ public class AddMember extends javax.swing.JPanel {
     private javax.swing.JScrollPane hasilScrollPane2;
     private javax.swing.JTextArea hasilTextArea;
     private javax.swing.JList<String> isiList;
+    private javax.swing.JList<String> isiList1;
     private javax.swing.JScrollPane isiScrollPane;
+    private javax.swing.JScrollPane isiScrollPane1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel judulLabel;
@@ -189,6 +211,12 @@ public class AddMember extends javax.swing.JPanel {
     public String getSelectedIsi() {
         return (String) isiList.getSelectedValue();
     }
+    public void setListIsi1(String list[]) {
+        isiList1.setListData(list);
+    }
+    public String getSelectedIsi1() {
+        return (String) isiList1.getSelectedValue();
+    }
     public void setSelectedIsiDetail(String s) {
         hasilTextArea.setText(s);
     }
@@ -209,5 +237,4 @@ public class AddMember extends javax.swing.JPanel {
     public void addAdapter(MouseAdapter e){
         isiList.addMouseListener(e);
     }
-    
 }

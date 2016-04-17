@@ -147,16 +147,17 @@ public class Aplikasi {
         d.GetKelompok(n).addAnggota(m);
     }
     /*-- end of menu add member KelompokTA --*/
-    /*-- menu find member KelompokTA --*/
-    public Mahasiswa Menu15(Dosen d, int n,String NIM){
-        return d.GetKelompok(n).getAnggota(NIM);
-    }
-    /*-- end of menu find member KelompokTA --*/
     /*-- menu delete member KelompokTA --*/
-    public void Menu16(Dosen d, int n,String NIM){
+    public void Menu15(Dosen d, int n,String NIM){
         d.GetKelompok(n).removeAnggota(NIM);
     }
     /*-- end of menu delete member KelompokTA --*/
+
+    /*-- menu find member KelompokTA --*/
+    public Mahasiswa Menu16(Dosen d, int n,String NIM){
+        return d.GetKelompok(n).getAnggota(NIM);
+    }
+    /*-- end of menu find member KelompokTA --*/
     /*-- end of menu lecturer only --*/
     
     /*-- menu student only --*/
@@ -214,9 +215,9 @@ public class Aplikasi {
                                 System.out.println(" 1. Create KelompokTA");
                                 System.out.println(" 2. Delete KelompokTA");
                                 System.out.println(" 3. Find KelompokTA");
-                                System.out.println(" 4. add member KelompokTA");
-                                System.out.println(" 5. find member KelompokTA");
-                                System.out.println(" 6. delete member KelompokTA");
+                                System.out.println(" 4. Add member KelompokTA");
+                                System.out.println(" 5. Delete member KelompokTA");
+                                System.out.println(" 6. Find member KelompokTA");
                                 System.out.println(" 7. keluar");
                                 System.out.print(" input      : ");
                                 a2 = sc.nextInt();
@@ -252,17 +253,17 @@ public class Aplikasi {
                                         n = sc.nextInt();
                                         System.out.print("NIM            : ");
                                         nim = sc2.nextLine();
-                                        Mahasiswa m = Menu15(d,n,nim);
-                                        if (m != null)
-                                            System.out.println(m.toString());
+                                        if (Menu16(d,n,nim) != null)
+                                            Menu15(d,n,nim);
                                         break;
                                     case 6:
                                         System.out.print("Nomor Kelompok : ");
                                         n = sc.nextInt();
                                         System.out.print("NIM            : ");
                                         nim = sc2.nextLine();
-                                        if (Menu15(d,n,nim) != null)
-                                            Menu16(d,n,nim);
+                                        Mahasiswa m = Menu16(d,n,nim);
+                                        if (m != null)
+                                            System.out.println(m.toString());
                                         break;
                                     default:
                                         System.out.println("masukan hanya dari 1 - 6");

@@ -18,16 +18,19 @@ public class CreateTA extends javax.swing.JPanel {
         judulTATextField = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
         addButton = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        DataKelompokTALabel = new javax.swing.JLabel();
+        isiScrollPane = new javax.swing.JScrollPane();
+        isiList = new javax.swing.JList<>();
 
         setPreferredSize(new java.awt.Dimension(400, 115));
 
         judulLabel.setText("Sisfo Pengolahan Data TA");
 
-        LocationLabel.setText("Create  TA| Mahasiswa");
+        LocationLabel.setText("Create  TA | Mahasiswa");
 
         judulTALabel.setText("Judul TA");
 
-        judulTATextField.setText("    ");
         judulTATextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 judulTATextFieldActionPerformed(evt);
@@ -42,6 +45,10 @@ public class CreateTA extends javax.swing.JPanel {
         });
 
         addButton.setText("Add");
+
+        DataKelompokTALabel.setText("Data Judul TA");
+
+        isiScrollPane.setViewportView(isiList);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -58,12 +65,17 @@ public class CreateTA extends javax.swing.JPanel {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LocationLabel, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(judulTATextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(278, 278, 278)
                         .addComponent(backButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(addButton)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(DataKelompokTALabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -81,7 +93,13 @@ public class CreateTA extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backButton)
                     .addComponent(addButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DataKelompokTALabel)
+                    .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void judulTATextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_judulTATextFieldActionPerformed
@@ -92,9 +110,13 @@ public class CreateTA extends javax.swing.JPanel {
     }//GEN-LAST:event_backButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DataKelompokTALabel;
     private javax.swing.JLabel LocationLabel;
     private javax.swing.JButton addButton;
     private javax.swing.JButton backButton;
+    private javax.swing.JList<String> isiList;
+    private javax.swing.JScrollPane isiScrollPane;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel judulLabel;
     private javax.swing.JLabel judulTALabel;
     private javax.swing.JTextField judulTATextField;
@@ -110,6 +132,12 @@ public class CreateTA extends javax.swing.JPanel {
     }
     public void reset() {
         judulTATextField.setText("");
+    }
+    public String getSelectedIsi() {
+        return (String) isiList.getSelectedValue();
+    }
+    public void setListIsi(String list[]) {
+        isiList.setListData(list);
     }
     public void addListener(ActionListener e) {
         judulTATextField.addActionListener(e);

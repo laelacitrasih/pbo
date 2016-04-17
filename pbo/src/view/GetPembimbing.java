@@ -16,6 +16,13 @@ public class GetPembimbing extends javax.swing.JPanel {
         kodeDosenTextField = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
         getButton = new javax.swing.JButton();
+        DataKelompokTALabel1 = new javax.swing.JLabel();
+        hasilScrollPane2 = new javax.swing.JScrollPane();
+        hasilList = new javax.swing.JList<>();
+        jSeparator2 = new javax.swing.JSeparator();
+        DataKodeDosenLabel = new javax.swing.JLabel();
+        kodeDosenScrollPane = new javax.swing.JScrollPane();
+        kodeDosenList = new javax.swing.JList<>();
 
         setPreferredSize(new java.awt.Dimension(400, 115));
 
@@ -25,7 +32,6 @@ public class GetPembimbing extends javax.swing.JPanel {
 
         kodeDosenLabel.setText("Kode Dosen");
 
-        kodeDosenTextField.setText("    ");
         kodeDosenTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 kodeDosenTextFieldActionPerformed(evt);
@@ -46,6 +52,14 @@ public class GetPembimbing extends javax.swing.JPanel {
             }
         });
 
+        DataKelompokTALabel1.setText("Hasil Pencarian");
+
+        hasilScrollPane2.setViewportView(hasilList);
+
+        DataKodeDosenLabel.setText("Data Kode Dosen");
+
+        kodeDosenScrollPane.setViewportView(kodeDosenList);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -65,7 +79,16 @@ public class GetPembimbing extends javax.swing.JPanel {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(backButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(getButton)))
+                        .addComponent(getButton))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(DataKelompokTALabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(DataKodeDosenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(kodeDosenScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -79,10 +102,20 @@ public class GetPembimbing extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(kodeDosenTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(kodeDosenLabel))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backButton)
                     .addComponent(getButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DataKelompokTALabel1)
+                    .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(DataKodeDosenLabel)
+                    .addComponent(kodeDosenScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -97,11 +130,18 @@ public class GetPembimbing extends javax.swing.JPanel {
     }//GEN-LAST:event_getButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel DataKelompokTALabel1;
+    private javax.swing.JLabel DataKodeDosenLabel;
     private javax.swing.JLabel LocationLabel;
     private javax.swing.JButton backButton;
     private javax.swing.JButton getButton;
+    private javax.swing.JList<String> hasilList;
+    private javax.swing.JScrollPane hasilScrollPane2;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel judulLabel;
     private javax.swing.JLabel kodeDosenLabel;
+    private javax.swing.JList<String> kodeDosenList;
+    private javax.swing.JScrollPane kodeDosenScrollPane;
     private javax.swing.JTextField kodeDosenTextField;
     // End of variables declaration//GEN-END:variables
     public String getKodeDosenTATextField(){
