@@ -64,6 +64,17 @@ public class TugasAkhir {
         String x = "Judul\t="+this.getJudul();
         return x;
     }
+    
+    public String getDosenView(){
+        String s = "";
+        if (pembimbing[0]!=null){
+            s = s +"Pembimbing 1: " + pembimbing[0].toString();
+        }
+        if (pembimbing[1]!=null){
+            s = s +"\nPembimbing 2: " + pembimbing[1].toString();
+        }
+        return s;
+    }
     /*--- end of toString ---*/
     /*------------------------- end of sprint 2 ------------------------- */
 }

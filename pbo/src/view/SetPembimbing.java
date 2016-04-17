@@ -1,5 +1,6 @@
 package view;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 public class SetPembimbing extends javax.swing.JPanel {
@@ -115,7 +116,7 @@ public class SetPembimbing extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void kodeDosenTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodeDosenTextFieldActionPerformed
@@ -142,7 +143,7 @@ public class SetPembimbing extends javax.swing.JPanel {
         return kodeDosenTextField.getText();
     }
     public int getSetPembimbing() {
-        return setPembimbingComboBox.getSelectedIndex() + 1;
+        return setPembimbingComboBox.getSelectedIndex();
     }
     public Object getSetButton() {
         return setButton;
@@ -153,9 +154,24 @@ public class SetPembimbing extends javax.swing.JPanel {
     public void reset() {
         kodeDosenTextField.setText("");
     }
+    public void setListIsi(String list[]) {
+        isiList.setListData(list);
+    }
+    public String getSelectedIsi() {
+        return (String) isiList.getSelectedValue();
+    }
+    public void setSelectedIsiDetail(String s) {
+        hasilTextArea.setText(s);
+    }
+    public Object getIsiList() {
+        return isiList;
+    }
     public void addListener(ActionListener e) {
         kodeDosenTextField.addActionListener(e);
         setButton.addActionListener(e);
         backButton.addActionListener(e);
+    }
+    public void addAdapter(MouseAdapter e){
+        isiList.addMouseListener(e);
     }
 }

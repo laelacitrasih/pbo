@@ -101,6 +101,9 @@ public class Aplikasi {
     public String[] getAllTA(Dosen d){
         return d.getAllTopikTA();
     }
+    public String getAllTA1(Mahasiswa m){
+        return m.getTugasAkhir().toString();
+    }
     public String[] getNIMMhs(){
         String[] s = new String[nMahasiswa];
         for (int i = 0;i < nMahasiswa;i++){

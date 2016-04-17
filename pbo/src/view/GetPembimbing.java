@@ -18,7 +18,7 @@ public class GetPembimbing extends javax.swing.JPanel {
         getButton = new javax.swing.JButton();
         DataKelompokTALabel1 = new javax.swing.JLabel();
         hasilScrollPane2 = new javax.swing.JScrollPane();
-        hasilList = new javax.swing.JList<>();
+        hasilTextArea = new javax.swing.JTextArea();
         jSeparator2 = new javax.swing.JSeparator();
         DataKodeDosenLabel = new javax.swing.JLabel();
         kodeDosenScrollPane = new javax.swing.JScrollPane();
@@ -54,7 +54,9 @@ public class GetPembimbing extends javax.swing.JPanel {
 
         DataKelompokTALabel1.setText("Hasil Pencarian");
 
-        hasilScrollPane2.setViewportView(hasilList);
+        hasilTextArea.setColumns(20);
+        hasilTextArea.setRows(5);
+        hasilScrollPane2.setViewportView(hasilTextArea);
 
         DataKodeDosenLabel.setText("Data Kode Dosen");
 
@@ -116,27 +118,23 @@ public class GetPembimbing extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DataKodeDosenLabel)
                     .addComponent(kodeDosenScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void kodeDosenTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kodeDosenTextFieldActionPerformed
     }//GEN-LAST:event_kodeDosenTextFieldActionPerformed
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
-
     private void getButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_getButtonActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DataKelompokTALabel1;
     private javax.swing.JLabel DataKodeDosenLabel;
     private javax.swing.JLabel LocationLabel;
     private javax.swing.JButton backButton;
     private javax.swing.JButton getButton;
-    private javax.swing.JList<String> hasilList;
     private javax.swing.JScrollPane hasilScrollPane2;
+    private javax.swing.JTextArea hasilTextArea;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel judulLabel;
     private javax.swing.JLabel kodeDosenLabel;
@@ -155,6 +153,12 @@ public class GetPembimbing extends javax.swing.JPanel {
     }
     public void reset() {
         kodeDosenTextField.setText("");
+    }
+    public String getSelectedIsi() {
+        return (String) kodeDosenList.getSelectedValue();
+    }
+    public void setListIsi(String list[]) {
+        kodeDosenList.setListData(list);
     }
     public void addListener(ActionListener e) {
         kodeDosenTextField.addActionListener(e);

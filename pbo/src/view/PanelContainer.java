@@ -26,7 +26,7 @@ public class PanelContainer extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        exitButton = new javax.swing.JButton();
+        logOutButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("imam");
@@ -44,7 +44,7 @@ public class PanelContainer extends javax.swing.JFrame {
             .addGap(0, 109, Short.MAX_VALUE)
         );
 
-        exitButton.setText("Exit");
+        logOutButton.setText("Log Out");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -56,7 +56,7 @@ public class PanelContainer extends javax.swing.JFrame {
                     .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 300, Short.MAX_VALUE)
-                        .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(logOutButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -65,14 +65,14 @@ public class PanelContainer extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(exitButton)
+                .addComponent(logOutButton)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton exitButton;
+    private javax.swing.JButton logOutButton;
     private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }

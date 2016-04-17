@@ -1,9 +1,7 @@
 package view;
-
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-
 public class CreateTA extends javax.swing.JPanel {
     public CreateTA() {
         initComponents();
@@ -20,8 +18,8 @@ public class CreateTA extends javax.swing.JPanel {
         addButton = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         DataKelompokTALabel = new javax.swing.JLabel();
-        isiScrollPane = new javax.swing.JScrollPane();
-        isiList = new javax.swing.JList<>();
+        kodeDosenScrollPane = new javax.swing.JScrollPane();
+        kodeDosenList = new javax.swing.JList<>();
 
         setPreferredSize(new java.awt.Dimension(400, 115));
 
@@ -48,7 +46,7 @@ public class CreateTA extends javax.swing.JPanel {
 
         DataKelompokTALabel.setText("Data Judul TA");
 
-        isiScrollPane.setViewportView(isiList);
+        kodeDosenScrollPane.setViewportView(kodeDosenList);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -75,7 +73,7 @@ public class CreateTA extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(DataKelompokTALabel, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(kodeDosenScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -98,28 +96,25 @@ public class CreateTA extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(DataKelompokTALabel)
-                    .addComponent(isiScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                    .addComponent(kodeDosenScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     private void judulTATextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_judulTATextFieldActionPerformed
     }//GEN-LAST:event_judulTATextFieldActionPerformed
-
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DataKelompokTALabel;
     private javax.swing.JLabel LocationLabel;
     private javax.swing.JButton addButton;
     private javax.swing.JButton backButton;
-    private javax.swing.JList<String> isiList;
-    private javax.swing.JScrollPane isiScrollPane;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel judulLabel;
     private javax.swing.JLabel judulTALabel;
     private javax.swing.JTextField judulTATextField;
+    private javax.swing.JList<String> kodeDosenList;
+    private javax.swing.JScrollPane kodeDosenScrollPane;
     // End of variables declaration//GEN-END:variables
     public String getJudulTATextField() {
         return judulTATextField.getText();
@@ -134,10 +129,10 @@ public class CreateTA extends javax.swing.JPanel {
         judulTATextField.setText("");
     }
     public String getSelectedIsi() {
-        return (String) isiList.getSelectedValue();
+        return (String) kodeDosenList.getSelectedValue();
     }
     public void setListIsi(String list[]) {
-        isiList.setListData(list);
+        kodeDosenList.setListData(list);
     }
     public void addListener(ActionListener e) {
         judulTATextField.addActionListener(e);

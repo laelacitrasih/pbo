@@ -65,6 +65,7 @@ public class Controller extends MouseAdapter implements ActionListener {
         a22.addListener(this);
         a23.addListener(this);
         a14.addAdapter(this);
+        a22.addAdapter(this);
         
 
         mainPanel = view.getMainPanel();
@@ -206,21 +207,28 @@ public class Controller extends MouseAdapter implements ActionListener {
             } else if (source.equals(a16.getFindButton())) {
                 int n = a16.getNomorTopikTATextField();
                 String m = a16.getNIMTextField();
-                model.Menu16(d, n-1, m);
+                Mahasiswa mC = model.Menu16(d, n-1, m);
                 a16.reset();
                 a16.setListIsi(model.getAllTA(d));
+                a16.setListHasil(mC.toString());
             } 
         } else if (currentView.equals("8")) {
             //current view = Main Menu 2 (Mahasiswa)
             if (source.equals(a2.getCreateTAButton())) {
                 currentView = "9";
                 view.getCardLayout().show(mainPanel, currentView);
+                //a21.setListIsi(model.getAllTA1(m));
             } else if (source.equals(a2.getSetPembimbingButton())) {
                 currentView = "10";
                 view.getCardLayout().show(mainPanel, currentView);
+                String[] a = new String[1];
+                a[0] = model.getAllTA1(m);
+                a22.setListIsi(a);
+                //a22.setListIsi(model.getAllTA(d));
             } else if (source.equals(a2.getGetPembimbingButton())) {
                 currentView = "11";
                 view.getCardLayout().show(mainPanel, currentView);
+                //a23.setListIsi(model.getAllTA(d));
             }
         } else if (currentView.equals("9")) {
             //current view = Create TA
@@ -228,8 +236,12 @@ public class Controller extends MouseAdapter implements ActionListener {
                 currentView = "8";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a21.getAddButton())) {
-                //model.Menu11(d, topik);
+                String judul = a21.getJudulTATextField();
+                model.Menu21(m, judul);
                 a21.reset();
+                String[] a = new String[1];
+                a[0] = model.getAllTA1(m);
+                a21.setListIsi(a);
             }
         } else if (currentView.equals("10")) {
             //current view = Set Pembimbing
@@ -237,8 +249,11 @@ public class Controller extends MouseAdapter implements ActionListener {
                 currentView = "8";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a22.getSetButton())) {
-                //model.Menu11(d, topik);
+                String kodeDosen = a22.getKodeDosenTATextField();
+                int nomor = a22.getSetPembimbing();
+                model.Menu22(m, model.getDosen(kodeDosen), nomor);
                 a22.reset();
+                
             }
         } else if (currentView.equals("11")) {
             //current view = Create TA
@@ -246,8 +261,10 @@ public class Controller extends MouseAdapter implements ActionListener {
                 currentView = "8";
                 view.getCardLayout().show(mainPanel, currentView);
             } else if (source.equals(a23.getGetButton())) {
-                //model.Menu11(d, topik);
+                String kodeDosen = a23.getKodeDosenTATextField();
+                Dosen d = model.Menu23(m, kodeDosen);
                 a23.reset();
+                a23.setListIsi(model.getAllTA(d));
             }
         }
     }
@@ -257,6 +274,18 @@ public class Controller extends MouseAdapter implements ActionListener {
             String topikSelected = a14.getSelectedIsi();
             if (topikSelected != null) {
                 a14.setSelectedIsiDetail(d.GetKelompok(topikSelected).toString());
+            }
+        } else if (currentView.equals("6")) {
+            String topikSelected = a15.getSelectedIsi();
+            if (topikSelected != null) {
+                a15.setSelectedIsiDetail(d.GetKelompok(topikSelected).toString());
+            }
+        } else if (currentView.equals("10")){
+            if (source.equals(a22.getIsiList())){
+                String taSelected = a22.getSelectedIsi();
+                if (taSelected != null) {
+                    a22.setSelectedIsiDetail(m.getTugasAkhir().getDosenView());
+                }
             }
         }
     }

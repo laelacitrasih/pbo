@@ -101,10 +101,10 @@ public class FindMember extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(nimLabel)
                                     .addComponent(DataKelompokTALabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(hasilScrollPane2)
-                                    .addComponent(nimTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
+                                .addGap(106, 106, 106)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(nimTextField)
+                                    .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -146,12 +146,9 @@ public class FindMember extends javax.swing.JPanel {
                     .addComponent(findButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(DataKelompokTALabel1)
-                        .addGap(61, 61, 61))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                    .addComponent(DataKelompokTALabel1)
+                    .addComponent(hasilScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,16 +164,11 @@ public class FindMember extends javax.swing.JPanel {
     private void nomorTopikTATextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomorTopikTATextFieldActionPerformed
     }//GEN-LAST:event_nomorTopikTATextFieldActionPerformed
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_backButtonActionPerformed
     private void nimTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nimTextFieldActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_nimTextFieldActionPerformed
-
     private void findButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findButtonActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_findButtonActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DataKelompokTALabel;
     private javax.swing.JLabel DataKelompokTALabel1;
@@ -216,14 +208,8 @@ public class FindMember extends javax.swing.JPanel {
     public void setListIsi(String list[]) {
         isiList.setListData(list);
     }
-    public String getSelectedIsi() {
-        return (String) isiList.getSelectedValue();
-    }
-    public void setSelectedIsiDetail(String s) {
+    public void setListHasil(String s) {
         hasilTextArea.setText(s);
-    }
-    public Object getSelectedIsiDetail() {
-        return hasilTextArea;
     }
      public String getSelectedNim() {
         return (String) nimList.getSelectedValue();

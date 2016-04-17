@@ -46,6 +46,11 @@ public class Mahasiswa extends Orang {
     public TugasAkhir getTugasAkhir(){
         return tugasAkhir;
     }
+    public String[] getAllTA(){
+        String[] a = new String[0];
+        a[0] = tugasAkhir.getJudul();
+        return a;
+    }
     /*--- end of get tugas akhir ---*/
     /*--- create Status ---*/
     public void createStatus(){
